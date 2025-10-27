@@ -2,4 +2,5 @@
 .pixi/*
 !.pixi/config.toml
 
-build
+build/
+hdf5/
