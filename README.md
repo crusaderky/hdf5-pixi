@@ -14,7 +14,7 @@ pixi r test
 pixi r pack
 ```
 
-## Build conda package (Linux/MacOSX only)
+## Build conda package
 
 ```bash
 pixi r build
