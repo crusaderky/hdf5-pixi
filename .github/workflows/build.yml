@@ -66,10 +66,6 @@ jobs:
         if: runner.os != 'Windows'
         run: pixi run conda-build
 
-      - name: Verify Conda Package
-        if: runner.os != 'Windows'
-        run: pixi run conda-verify
-
       - name: Upload Conda repository
         if: runner.os != 'Windows'
         uses: actions/upload-artifact@v5

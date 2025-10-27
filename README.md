@@ -19,7 +19,6 @@ pixi r pack
 pixi r build
 pixi r pack
 pixi r conda-build
-pixi r conda-verify
 ```
 
 A local conda repository will be created in the `conda-bld/` directory.
