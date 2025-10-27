@@ -1,4 +1,5 @@
-[Pixi](https://pixi.sh) script to build libhdf5
+[Pixi](https://pixi.sh) script to build libhdf5 git tip with debug
+symbols and package it with conda.
 
 # Usage
 
@@ -48,3 +49,10 @@ channels = ["file:////absolute//path//to//hdf5-pixi//conda-bld", "conda-forge"]
 [dependencies]
 hdf5 = "*"
 ```
+
+**IMPORTANT:** After every hdf5 rebuild, always run
+```bash
+pixi clean
+pixi clean cache
+```
+in your project to avoid retaining an older build.

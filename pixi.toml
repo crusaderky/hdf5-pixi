@@ -5,14 +5,13 @@ platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
 version = "0.1.0"
 
 [activation.env]
-CFLAGS = "-g -O0"
 CMAKE_BUILD_PARALLEL_LEVEL = "4"
 CTEST_PARALLEL_LEVEL = "4"
-CMAKE_CONFIG_TYPE = "Developer"
-CMAKE_BUILD_TYPE = "Developer"
+CMAKE_CONFIG_TYPE = "Debug"
+CMAKE_BUILD_TYPE = "Debug"
 # CMAKE_CONFIG_TYPE = "Release"
 # CMAKE_BUILD_TYPE = "Release"
-HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON"
+HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON -DHDF5_ENABLE_COVERAGE=ON"
 
 [tasks]
 clean = { cmd = "rm -rf build conda-bld" }
