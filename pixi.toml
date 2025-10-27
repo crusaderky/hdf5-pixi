@@ -14,8 +14,8 @@ CONFIG = "Debug"
 clean = { cmd = "rm -rf build" }
 init = { cmd = "cmake -S hdf5 -B build" }
 build = { cwd = "build", cmd = "cmake --build . --parallel $NTHREADS --config $CONFIG", depends-on = ["init"] }
-test = { cwd = "build", cmd = "ctest --output-on-failure --parallel $NTHREADS --build-config $CONFIG", depends-on = ["build"] }
-pack = { cwd = "build", cmd = "cpack -C $CONFIG -V", depends-on = ["build"] }
+test = { cwd = "build", cmd = "ctest --output-on-failure --parallel $NTHREADS --build-config $CONFIG" }
+pack = { cwd = "build", cmd = "cpack -C $CONFIG -V" }
 
 [dependencies]
 cmake = "*"
