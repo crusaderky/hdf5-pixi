@@ -45,7 +45,7 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0
         with:
           pixi-version: v0.58.0
-          environments: default
+          environments: build conda-build
 
       - name: Build
         run: pixi run build
@@ -61,3 +61,18 @@ jobs:
         with:
           name: hdf5-pixi-${{ matrix.os }}
           path: build/HDF5-*
+
+      - name: Build Conda Package
+        if: runner.os != 'Windows'
+        run: pixi run conda-build
+
+      - name: Verify Conda Package
+        if: runner.os != 'Windows'
+        run: pixi run conda-verify
+
+      - name: Upload Conda repository
+        if: runner.os != 'Windows'
+        uses: actions/upload-artifact@v5
+        with:
+          name: hdf5-conda-${{ matrix.os }}
+          path: conda-bld

@@ -1,0 +1,37 @@
+{% set version = "2.0.0.4" %}
+
+package:
+  name: hdf5
+  version: {{ version }}
+
+# No source section - we'll handle the tarball in build.sh
+
+build:
+  number: 0
+  skip: true  # [win]
+  run_exports:
+    # https://abi-laboratory.pro/tracker/timeline/hdf5/
+    - {{ pin_subpackage('hdf5', max_pin='x.x.x') }}
+
+requirements:
+  build:
+  host:
+    - libaec
+    - zlib
+  run:
+    - libaec
+    - zlib
+
+test:
+  commands:
+    - test -f $PREFIX/lib/libhdf5.so    # [linux]
+    - test -f $PREFIX/lib/libhdf5.dylib # [osx]
+    - test -f $PREFIX/include/hdf5.h
+    - h5diff --help
+    - h5dump --help
+    - h5ls --help
+
+about:
+  home: https://www.hdfgroup.org/solutions/hdf5/
+  license: BSD-3-Clause
+  license_family: BSD

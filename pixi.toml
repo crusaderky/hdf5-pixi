@@ -11,14 +11,29 @@ CONFIG = "Debug"
 # CONFIG = "Release"
 
 [tasks]
-clean = { cmd = "rm -rf build" }
-init = { cmd = "cmake -S hdf5 -B build" }
-build = { cwd = "build", cmd = "cmake --build . --parallel $NTHREADS --config $CONFIG", depends-on = ["init"] }
-test = { cwd = "build", cmd = "ctest --output-on-failure --parallel $NTHREADS --build-config $CONFIG" }
-pack = { cwd = "build", cmd = "cpack -C $CONFIG -V" }
+clean = { cmd = "rm -rf build conda-bld" }
 
-[dependencies]
+[feature.build.dependencies]
 cmake = "*"
 compilers = "*"
 ninja = "*"
 openjdk = "*"
+
+[feature.build.tasks]
+cmake-init = { cmd = "cmake -S hdf5 -B build" }
+build = { cwd = "build", cmd = "cmake --build . --parallel $NTHREADS --config $CONFIG", depends-on = ["cmake-init"] }
+test = { cwd = "build", cmd = "ctest --output-on-failure --parallel $NTHREADS --build-config $CONFIG" }
+pack = { cwd = "build", cmd = "cpack -C $CONFIG -V" }
+
+[feature.conda-build.dependencies]
+boa = "*"
+conda-build = "*"
+conda-verify = "*"
+
+[feature.conda-build.tasks]
+conda-build = { cmd = "conda mambabuild recipe --output-folder conda-bld" }
+conda-verify = { cmd = "conda-verify conda-bld/**/*.tar.bz2" }
+
+[environments]
+build = ["build"]
+conda-build = ["conda-build"]
