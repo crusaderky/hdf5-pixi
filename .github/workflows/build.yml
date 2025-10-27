@@ -32,8 +32,15 @@ jobs:
           - windows-latest  # x86-64
 
     steps:
-      - name: Checkout
+      - name: Checkout hdf5-pixi
         uses: actions/checkout@v4
+
+      - name: Checkout HDF5
+        uses: actions/checkout@v4
+        with:
+          repository: HDFGroup/hdf5
+          path: hdf5
+          ref: develop
 
       - uses: prefix-dev/setup-pixi@v0
         with:
