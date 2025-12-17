@@ -35,18 +35,13 @@ jobs:
 
     steps:
       - name: Checkout hdf5-pixi
-        uses: actions/checkout@v4
-
-      - name: Checkout HDF5
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
-          repository: HDFGroup/hdf5
-          path: hdf5
-          ref: develop
+          submodules: 'true'
 
       - uses: prefix-dev/setup-pixi@v0
         with:
-          pixi-version: v0.58.0
+          pixi-version: v0.62.0
           environments: build conda-build
 
       - name: Build
@@ -59,7 +54,7 @@ jobs:
         run: pixi run pack
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: hdf5-pixi-${{ matrix.os }}
           path: build/HDF5-*
@@ -68,7 +63,7 @@ jobs:
         run: pixi run conda-build
 
       - name: Upload Conda repository
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: hdf5-conda-${{ matrix.os }}
           path: conda-bld
