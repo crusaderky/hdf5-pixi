@@ -1,0 +1,26 @@
+context:
+  version: "2.0.1"
+
+package:
+  name: hdf5
+  version: ${{ version }}
+
+build:
+  script:
+    file: ../conda-build.sh
+    env:
+      BUILD_DIR: build-default
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - cmake
+    - ninja
+  host:
+    - libaec
+    - zlib
+
+about:
+  homepage: https://www.hdfgroup.org/solutions/hdf5/
+  license: BSD-3-Clause
+  license_family: BSD

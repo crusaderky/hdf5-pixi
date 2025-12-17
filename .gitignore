@@ -2,5 +2,4 @@
 .pixi/*
 !.pixi/config.toml
 
-build/
-conda-bld/
+build-*/
