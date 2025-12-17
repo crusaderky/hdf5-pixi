@@ -16,7 +16,7 @@ echo "Using tarball: $TARBALL"
 tar -xzvf "$TARBALL"
 
 # Find the extracted directory
-# It will be something like HDF5-2.0.0.4-Linux/HDF_Group/HDF5/2.0.0.4
+# It will be something like HDF5-2.0.1-Linux/HDF_Group/HDF5/2.0.1
 EXTRACTED_DIR=$(tar -tzf "$TARBALL" | tail -1 | cut -f1,2,3,4 -d"/")
 echo "Extracted directory: $EXTRACTED_DIR"
 cd "$EXTRACTED_DIR"
