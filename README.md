@@ -8,7 +8,7 @@ symbols and package it with conda.
 ```bash
 git clone https://github.com/crusaderky/hdf5-pixi.git
 cd hdf5-pixi
-git clone https://github.com/HDFGroup/hdf5.git
+git submodule init
 pixi r build
 pixi r test
 pixi r pack

@@ -3,5 +3,4 @@
 !.pixi/config.toml
 
 build/
-hdf5/
 conda-bld/
