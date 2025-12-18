@@ -1,0 +1,55 @@
+name: conda recipe
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch: # allows you to trigger manually
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+# When this workflow is queued, automatically cancel any previous running
+# or pending jobs from the same branch
+concurrency:
+  group: conda-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.os }} - ${{ matrix.variant }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest # x86-64
+          - ubuntu-24.04-arm # ARM
+          - macos-15-intel # x86-64
+          - macos-latest # ARM
+        variant:
+          - default
+          - asan
+          - tsan
+
+    steps:
+      - name: Checkout hdf5-pixi and hdf5
+        uses: actions/checkout@v6
+        with:
+          submodules: 'true'
+
+      - uses: prefix-dev/setup-pixi@v0
+        with:
+          pixi-version: v0.62.0
+          environments: conda-${{ matrix.variant }}
+
+      - name: List conda packages
+        run: pixi ls -e conda-${{ matrix.variant }}
+
+      - name: List files in conda environment
+        run: pixi run -e conda-${{ matrix.variant }} conda-list
+
+      - name: Smoke test
+        run: pixi run -e conda-${{ matrix.variant }} smoke-test

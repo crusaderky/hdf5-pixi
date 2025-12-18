@@ -1,0 +1,35 @@
+context:
+  version: "2.0.1"
+
+package:
+  name: hdf5
+  version: ${{ version }}
+
+build:
+  script:
+    file: ../conda-build.sh
+    env:
+      BUILD_DIR: build-tsan
+      CFLAGS: "-fsanitize=thread"
+      LDFLAGS: "-fsanitize=thread"
+
+requirements:
+  build:
+    - clang=21
+    - cmake
+    - ninja
+  host:
+    - libaec
+    - zlib
+  run:
+    - if: linux
+      then:
+        - libsanitizer
+    - if: osx
+      then:
+        - compiler-rt=21  # Must match clang version above
+
+about:
+  homepage: https://www.hdfgroup.org/solutions/hdf5/
+  license: BSD-3-Clause
+  license_family: BSD

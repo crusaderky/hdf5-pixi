@@ -1,42 +1,57 @@
 [workspace]
-name = "hdf5"
 channels = ["https://prefix.dev/conda-forge"]
 platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64"]
+preview = ["pixi-build"]
 
-[activation.env]
+[feature.build.activation.env]
+CC = "clang"
 CMAKE_BUILD_PARALLEL_LEVEL = "4"
 CTEST_PARALLEL_LEVEL = "4"
 CMAKE_CONFIG_TYPE = "Debug"
 CMAKE_BUILD_TYPE = "Debug"
 # CMAKE_CONFIG_TYPE = "Release"
 # CMAKE_BUILD_TYPE = "Release"
+# VERBOSE = "1"
+# CFLAGS="-fsanitize=address"
+# LDFLAGS="-fsanitize=address"
+# CFLAGS="-fsanitize=thread"
+# LDFLAGS="-fsanitize=thread"
 HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON -DHDF5_ENABLE_COVERAGE=ON"
 
 [tasks]
-clean = { cmd = "rm -rf build conda-bld" }
+clean = { cmd = "rm -rf build-*" }
+conda-list = "cd $CONDA_PREFIX && find ."
 
 [feature.build.dependencies]
+clang = "=21"
 cmake = "*"
-compilers = "*"
 ninja = "*"
-openjdk = "*"
 
 [feature.build.tasks]
-config = { cmd = "cmake -S hdf5 -B build $HDF5_CONFIG_ARGS" }
-build = { cwd = "build", cmd = "cmake --build .", depends-on = ["config"] }
-test = { cwd = "build", cmd = "ctest --output-on-failure" }
-pack = { cwd = "build", cmd = "cpack -V" }
+config = { cmd = "cmake -S hdf5 -B build-local $HDF5_CONFIG_ARGS" }
+cmake = { cwd = "build-local", cmd = "cmake --build .", depends-on = ["config"] }
+ctest = { cwd = "build-local", cmd = "ctest --output-on-failure" }
+cpack = { cwd = "build-local", cmd = "cpack -V" }
+smoke-test = { cmd = "./smoke-test-local.sh" }
 
-[feature.conda-build.dependencies]
-boa = "*"
-conda-build = "*"
-conda-verify = "*"
+[feature.conda-test.tasks]
+smoke-test = { cmd = "./smoke-test-conda.sh" }
 
-[feature.conda-build.tasks]
-conda-mambabuild = { cmd = "conda mambabuild recipe --output-folder conda-bld" }
-conda-verify = { cmd = "conda-verify conda-bld/**/*.tar.bz2" }
-conda-build = { depends-on = ["conda-mambabuild", "conda-verify"] }
+[feature.conda-default.dependencies]
+hdf5 = { path = "default" }
+
+[feature.conda-asan.dependencies]
+hdf5 = { path = "asan" }
+
+[feature.conda-tsan.dependencies]
+hdf5 = { path = "tsan" }
+
+[feature.conda-san.target.osx.activation.env]
+# clang version must match {asan,tsan}/recipe.yaml
+DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
 
 [environments]
 build = ["build"]
-conda-build = ["conda-build"]
+conda-default = ["conda-test", "conda-default"]
+conda-asan = ["conda-test", "conda-san", "conda-asan"]
+conda-tsan = ["conda-test", "conda-san", "conda-tsan"]
