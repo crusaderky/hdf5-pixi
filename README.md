@@ -51,6 +51,10 @@ hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "tsan" 
 hdf5 = { path = "/my/projects/hdf5-pixi/default" }
 hdf5 = { path = "/my/projects/hdf5-pixi/asan" }
 hdf5 = { path = "/my/projects/hdf5-pixi/tsan" }
+
+# This is only needed for asan/tsan
+[target.osx.activation.env]
+DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
 ```
 
 You will need to recompile downstream packages, such as

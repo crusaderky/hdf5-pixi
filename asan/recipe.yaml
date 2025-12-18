@@ -22,6 +22,9 @@ requirements:
     - libaec
     - zlib
   run:
+    - if: linux
+      then:
+        - libsanitizer
     - if: osx
       then:
         - compiler-rt=21  # Must match clang version above
