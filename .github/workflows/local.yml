@@ -53,11 +53,15 @@ jobs:
 
       - name: set CFLAGS for ASAN
         if: matrix.variant == 'asan'
-        run: echo "CFLAGS='-fsanitize=address'" >> $GITHUB_ENV
+        run: |
+          echo "CFLAGS='-fsanitize=address'" >> $GITHUB_ENV
+          echo "LDFLAGS='-fsanitize=address'" >> $GITHUB_ENV
 
       - name: set CFLAGS for TSAN
         if: matrix.variant == 'tsan'
-        run: echo "CFLAGS='-fsanitize=thread'" >> $GITHUB_ENV
+        run: |
+          echo "CFLAGS='-fsanitize=thread'" >> $GITHUB_ENV
+          echo "LDFLAGS='-fsanitize=thread'" >> $GITHUB_ENV
 
       - name: cmake
         env:

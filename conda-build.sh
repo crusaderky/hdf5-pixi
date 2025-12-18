@@ -1,6 +1,7 @@
 #!/bin/bash
 set -ex
 
+CC="clang"
 export CMAKE_BUILD_PARALLEL_LEVEL="4"
 export CTEST_PARALLEL_LEVEL="4"
 export CMAKE_CONFIG_TYPE="Debug"

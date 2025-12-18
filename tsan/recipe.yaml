@@ -15,19 +15,16 @@ build:
 
 requirements:
   build:
-    - ${{ compiler('c') }}
+    - clang=21
     - cmake
     - ninja
   host:
     - libaec
     - zlib
   run:
-    - if: linux
-      then:
-        - libsanitizer
     - if: osx
       then:
-        - compiler-rt
+        - compiler-rt=21  # Must match clang version above
 
 about:
   homepage: https://www.hdfgroup.org/solutions/hdf5/
