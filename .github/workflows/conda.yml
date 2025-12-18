@@ -53,3 +53,7 @@ jobs:
 
       - name: Smoke test
         run: pixi run -e conda-${{ matrix.variant }} smoke-test
+
+      - name: Setup tmate session
+        if: failure()
+        uses: mxschmitt/action-tmate@v3
