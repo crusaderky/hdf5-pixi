@@ -50,8 +50,73 @@ hdf5 = { path = "tsan" }
 # clang version must match {asan,tsan}/recipe.yaml
 DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
 
+[feature.h5py.dependencies]
+clang = "=21"
+pytest = "*"
+pytest-mpi = "*"
+# h5py build dependencies, needed for --no-build-isolation
+packaging = "*"
+pkgconfig = "*"
+setuptools = "*"
+cython = "*"
+
+[feature.h5py.activation.env]
+CC = "h5cc"
+
+[feature.h5py.tasks]
+h5py-install = "python -m pip install h5py/ --no-build-isolation --no-dependencies"
+h5py-smoke-test = "python h5py-smoke-test.py"
+h5py-pytest = "python -m pytest --pyargs h5py -v"
+
+[feature.h5py-default.dependencies]
+python.git = "https://github.com/python/cpython"
+python.subdirectory = "Tools/pixi-packages/default"
+numpy.git = "https://github.com/crusaderky/numpy"
+numpy.subdirectory = "pixi-packages/default"
+numpy.rev = "pixi-staging"
+hdf5 = { path = "default" }
+
+[feature.h5py-free-threading.dependencies]
+python.git = "https://github.com/crusaderky/cpython"
+python.subdirectory = "Tools/pixi-packages/free-threading"
+python.rev = "tsan"  # Not a typo
+numpy.git = "https://github.com/crusaderky/numpy"
+numpy.subdirectory = "pixi-packages/free-threading"
+numpy.rev = "pixi-staging"
+hdf5 = { path = "default" }
+
+[feature.h5py-asan.dependencies]
+python.git = "https://github.com/python/cpython"
+python.subdirectory = "Tools/pixi-packages/asan"
+numpy.git = "https://github.com/crusaderky/numpy"
+numpy.subdirectory = "pixi-packages/asan"
+numpy.rev = "pixi-staging"
+hdf5 = { path = "asan" }
+
+[feature.h5py-asan.activation.env]
+ASAN_OPTIONS = "detect_leaks=0:symbolize=1:strict_init_order=true:allocator_may_return_null=1:use_sigaltstack=0"
+CFLAGS = "-fsanitize=address"
+LDFLAGS = "-fsanitize=address"
+
+[feature.h5py-tsan-free-threading.dependencies]
+python.git = "https://github.com/crusaderky/cpython"
+python.subdirectory = "Tools/pixi-packages/tsan-free-threading"
+python.rev = "tsan"
+numpy.git = "https://github.com/crusaderky/numpy"
+numpy.subdirectory = "pixi-packages/tsan-free-threading"
+numpy.rev = "pixi-staging"
+hdf5 = { path = "tsan" }
+
+[feature.h5py-tsan-free-threading.activation.env]
+CFLAGS = "-fsanitize=thread"
+LDFLAGS = "-fsanitize=thread"
+
 [environments]
 build = ["build"]
 conda-default = ["conda-test", "conda-default"]
 conda-asan = ["conda-test", "conda-san", "conda-asan"]
 conda-tsan = ["conda-test", "conda-san", "conda-tsan"]
+h5py-default = ["conda-test", "h5py", "h5py-default"]
+h5py-free-threading = ["conda-test", "h5py", "h5py-free-threading"]
+h5py-asan = ["conda-test", "conda-san", "h5py", "h5py-asan"]
+h5py-tsan-free-threading = ["conda-test", "conda-san", "h5py", "h5py-tsan-free-threading"]
