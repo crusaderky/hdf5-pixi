@@ -1,4 +1,4 @@
-name: conda recipe
+name: h5py
 
 on:
   push:
@@ -14,7 +14,7 @@ defaults:
 # When this workflow is queued, automatically cancel any previous running
 # or pending jobs from the same branch
 concurrency:
-  group: conda-${{ github.ref }}
+  group: h5py-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
         variant:
           - default
           - asan
-          - tsan
+          # - tsan  # Missing pixi recipes for cpython and numpy 
 
     steps:
       - name: Checkout hdf5-pixi and hdf5
@@ -51,5 +51,11 @@ jobs:
       - name: List files in conda environment
         run: pixi run -e conda-${{ matrix.variant }} conda-list
 
+      - name: Build and install h5py
+        run: pixi run -e h5py-${{ matrix.variant }} h5py-install
+    
       - name: Smoke test
-        run: pixi run -e conda-${{ matrix.variant }} smoke-test
+        run: pixi run -e h5py-${{ matrix.variant }} h5py-smoke-test
+
+      - name: Pytest
+        run: pixi run -e h5py-${{ matrix.variant }} h5py-pytest
