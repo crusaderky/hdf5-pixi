@@ -2,6 +2,9 @@
 symbols and deploy it with conda in your pixi projects.
 Supports variant builds with (e.g. ASAN, TSAN).
 
+Additionally, this project can build the whole h5py stack
+(python, numpy, hdf5, h5py) with ASAN.
+
 # Usage
 
 ## Build, test, and package HDF5
@@ -59,6 +62,25 @@ DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
 
 You will need to recompile downstream packages, such as
 `h5py` or `versioned-hdf5`, from sources.
+
+## h5py
+
+Installs python, numpy, hdf5, and h5py all on git tip:
+```bash
+pixi r -e h5py-default h5py-install
+pixi r -e h5py-default h5py-smoke-test  # Print versions and exit
+pixi r -e h5py-default h5py-pytest  # Run the full pytest suite
+```
+You may use the following environments:
+- `h5py-default`: GIL enabled
+- `h5py-freethreading`: GIL disabled
+- `h5py-asan`: GIL enabled, ASan enabled
+- `h5py-tsan-freethreading`: GIL disabled, TSan enabled
+
+In all cases, the full stack is built from sources.
+CPython and NumPy are built as of the current git tip.
+HDF5 and h5py are built from their respective git subprojects 
+`hdf5/` and `h5py/`.
 
 ## Troubleshooting
 
