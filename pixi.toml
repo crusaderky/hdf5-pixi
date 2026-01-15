@@ -85,6 +85,7 @@ numpy.rev = "tsan-ft-pixi2"
 numpy.git = "https://github.com/crusaderky/numpy"
 numpy.subdirectory = "pixi-packages/freethreading"
 hdf5 = { path = "default" }
+pytest-run-parallel = "*"
 
 [feature.h5py-asan.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
@@ -108,6 +109,7 @@ numpy.git = "https://github.com/crusaderky/numpy"
 numpy.rev = "tsan-ft-pixi2"
 numpy.subdirectory = "pixi-packages/tsan-freethreading"
 hdf5 = { path = "tsan" }
+pytest-run-parallel = "*"
 
 [feature.h5py-tsan-freethreading.activation.env]
 CFLAGS = "-fsanitize=thread"
