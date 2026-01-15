@@ -373,7 +373,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://prefix.dev/conda-forge/linux-64/llvm-openmp-21.1.8-h4922eb0_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: hb0f4dca_0
       - conda: https://prefix.dev/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -438,7 +438,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/llvm-openmp-21.1.8-he40846f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ncurses-6.5-ha32ae93_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: he8cfe8b_0
       - conda: https://prefix.dev/conda-forge/linux-aarch64/openssl-3.6.0-h8e36d6e_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -498,7 +498,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21-21.1.8-h879f4bc_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21.1.8-hb0207f0_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/ncurses-6.5-h0622a9a_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h0dc7051_0
       - conda: https://prefix.dev/conda-forge/osx-64/openssl-3.6.0-h230baf5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -560,7 +560,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21-21.1.8-h91fd4e7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/ncurses-6.5-h5e97a16_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h60d57d3_0
       - conda: https://prefix.dev/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -631,7 +631,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://prefix.dev/conda-forge/linux-64/llvm-openmp-21.1.8-h4922eb0_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: hb0f4dca_0
       - conda: https://prefix.dev/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -695,7 +695,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/llvm-openmp-21.1.8-he40846f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ncurses-6.5-ha32ae93_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: he8cfe8b_0
       - conda: https://prefix.dev/conda-forge/linux-aarch64/openssl-3.6.0-h8e36d6e_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -755,7 +755,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21-21.1.8-h879f4bc_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21.1.8-hb0207f0_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/ncurses-6.5-h0622a9a_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h0dc7051_0
       - conda: https://prefix.dev/conda-forge/osx-64/openssl-3.6.0-h230baf5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -817,7 +817,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21-21.1.8-h91fd4e7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/ncurses-6.5-h5e97a16_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h60d57d3_0
       - conda: https://prefix.dev/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -888,7 +888,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://prefix.dev/conda-forge/linux-64/llvm-openmp-21.1.8-h4922eb0_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: hb0f4dca_0
       - conda: https://prefix.dev/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -898,6 +898,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -952,7 +953,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/llvm-openmp-21.1.8-he40846f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ncurses-6.5-ha32ae93_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: he8cfe8b_0
       - conda: https://prefix.dev/conda-forge/linux-aarch64/openssl-3.6.0-h8e36d6e_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -963,6 +964,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/readline-8.3-hb682ff5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1012,7 +1014,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21-21.1.8-h879f4bc_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21.1.8-hb0207f0_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/ncurses-6.5-h0622a9a_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h0dc7051_0
       - conda: https://prefix.dev/conda-forge/osx-64/openssl-3.6.0-h230baf5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1022,6 +1024,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/osx-64/readline-8.3-h68b038d_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1074,7 +1077,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21-21.1.8-h91fd4e7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/ncurses-6.5-h5e97a16_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h60d57d3_0
       - conda: https://prefix.dev/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1085,6 +1088,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/readline-8.3-h46df422_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1146,7 +1150,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://prefix.dev/conda-forge/linux-64/llvm-openmp-21.1.8-h4922eb0_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: hb0f4dca_0
       - conda: https://prefix.dev/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1156,6 +1160,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1211,7 +1216,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/llvm-openmp-21.1.8-he40846f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ncurses-6.5-ha32ae93_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: he8cfe8b_0
       - conda: https://prefix.dev/conda-forge/linux-aarch64/openssl-3.6.0-h8e36d6e_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1222,6 +1227,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/readline-8.3-hb682ff5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1271,7 +1277,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21-21.1.8-h879f4bc_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/llvm-tools-21.1.8-hb0207f0_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/ncurses-6.5-h0622a9a_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h0dc7051_0
       - conda: https://prefix.dev/conda-forge/osx-64/openssl-3.6.0-h230baf5_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1281,6 +1287,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/osx-64/readline-8.3-h68b038d_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -1333,7 +1340,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21-21.1.8-h91fd4e7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/llvm-tools-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/ncurses-6.5-h5e97a16_3.conda
-      - conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+      - conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
         build: h60d57d3_0
       - conda: https://prefix.dev/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
@@ -1344,6 +1351,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/pygments-2.19.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-9.0.2-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pytest-mpi-0.6-pyhd8ed1ab_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/python_abi-3.15-8_cp315t.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/readline-8.3-h46df422_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
@@ -3604,7 +3612,7 @@ packages:
   license_family: APACHE
   size: 164450
   timestamp: 1763688228613
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h0dc7051_0
@@ -3619,7 +3627,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h60d57d3_0
@@ -3634,7 +3642,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: hb0f4dca_0
@@ -3651,7 +3659,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fasan&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: he8cfe8b_0
@@ -3668,7 +3676,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h0dc7051_0
@@ -3683,7 +3691,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h60d57d3_0
@@ -3698,7 +3706,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: hb0f4dca_0
@@ -3715,7 +3723,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Fdefault&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: he8cfe8b_0
@@ -3732,7 +3740,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h0dc7051_0
@@ -3747,7 +3755,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h60d57d3_0
@@ -3762,7 +3770,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: hb0f4dca_0
@@ -3779,7 +3787,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ffreethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: he8cfe8b_0
@@ -3796,7 +3804,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h0dc7051_0
@@ -3811,7 +3819,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: h60d57d3_0
@@ -3826,7 +3834,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: hb0f4dca_0
@@ -3843,7 +3851,7 @@ packages:
   license: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
   package_build_source:
     path: ../..
-- conda: git+https://github.com/crusaderky/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi2#a2c6196501c5e3f8785acd3c56dca105582c3460
+- conda: git+https://github.com/ngoldbaum/numpy?subdirectory=pixi-packages%2Ftsan-freethreading&rev=tsan-ft-pixi#5afe66fc20180d1b42360107cccb01feaa553a3f
   name: numpy
   version: 2.5.0.dev0
   build: he8cfe8b_0
@@ -4032,6 +4040,16 @@ packages:
   license_family: BSD
   size: 11701
   timestamp: 1733585428799
+- conda: https://prefix.dev/conda-forge/noarch/pytest-run-parallel-0.8.2-pyhd8ed1ab_0.conda
+  sha256: dc1aae8162fe5e21dc38175fdb1627a146a73885215433e151a195333f6d8e20
+  md5: 288250b7e539cddf52f39616deae278d
+  depends:
+  - pytest >=6.2.0
+  - python >=3.10
+  license: MIT
+  license_family: MIT
+  size: 23601
+  timestamp: 1768437488141
 - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#f028dedfbb2ffa6e83a96b5cb4a43d4340d5434e
   name: python
   version: '3.15'

@@ -64,9 +64,9 @@ cython = "*"
 CC = "h5cc"
 
 [feature.h5py.tasks]
-h5py-install = "python -m pip install h5py/ -v --no-build-isolation --no-dependencies"
+h5py-install = "python -m pip install h5py/ -vv --no-build-isolation --no-dependencies"
 h5py-smoke-test = "python h5py-smoke-test.py"
-h5py-pytest = "python -m pytest --pyargs h5py -v"
+h5py-pytest = "python -m pytest --pyargs h5py -sv"
 
 [feature.h5py-default.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
@@ -77,6 +77,10 @@ numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/default"
 hdf5 = { path = "default" }
 
+[feature.h5py-default.activation.env]
+CFLAGS = "-g"
+LDFLAGS = "-g"
+
 [feature.h5py-freethreading.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
 python.rev = "tsan"
@@ -86,6 +90,10 @@ numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/freethreading"
 hdf5 = { path = "default" }
 pytest-run-parallel = "*"
+
+[feature.h5py-freethreading.activation.env]
+CFLAGS = "-g"
+LDFLAGS = "-g"
 
 [feature.h5py-asan.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
@@ -98,22 +106,22 @@ hdf5 = { path = "asan" }
 
 [feature.h5py-asan.activation.env]
 ASAN_OPTIONS = "detect_leaks=0:symbolize=1:strict_init_order=true:allocator_may_return_null=1:use_sigaltstack=0"
-CFLAGS = "-fsanitize=address"
-LDFLAGS = "-fsanitize=address"
+CFLAGS = "-g -fsanitize=address"
+LDFLAGS = "-g -fsanitize=address"
 
 [feature.h5py-tsan-freethreading.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
 python.rev = "tsan"
 python.subdirectory = "Tools/pixi-packages/tsan-freethreading"
-numpy.git = "https://github.com/crusaderky/numpy"
-numpy.rev = "tsan-ft-pixi2"
+numpy.git = "https://github.com/ngoldbaum/numpy"
+numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/tsan-freethreading"
 hdf5 = { path = "tsan" }
 pytest-run-parallel = "*"
 
 [feature.h5py-tsan-freethreading.activation.env]
-CFLAGS = "-fsanitize=thread"
-LDFLAGS = "-fsanitize=thread"
+CFLAGS = "-g -fsanitize=thread"
+LDFLAGS = "-g -fsanitize=thread"
 
 [environments]
 build = ["build"]
