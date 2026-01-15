@@ -72,8 +72,8 @@ h5py-pytest = "python -m pytest --pyargs h5py -v"
 python.git = "https://github.com/crusaderky/cpython"
 python.rev = "tsan"
 python.subdirectory = "Tools/pixi-packages/default"
-numpy.git = "https://github.com/crusaderky/numpy"
-numpy.rev = "tsan-ft-pixi2"
+numpy.git = "https://github.com/ngoldbaum/numpy"
+numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/default"
 hdf5 = { path = "default" }
 
@@ -81,8 +81,8 @@ hdf5 = { path = "default" }
 python.git = "https://github.com/crusaderky/cpython"
 python.rev = "tsan"
 python.subdirectory = "Tools/pixi-packages/freethreading"
-numpy.rev = "tsan-ft-pixi2"
-numpy.git = "https://github.com/crusaderky/numpy"
+numpy.git = "https://github.com/ngoldbaum/numpy"
+numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/freethreading"
 hdf5 = { path = "default" }
 pytest-run-parallel = "*"
@@ -91,8 +91,8 @@ pytest-run-parallel = "*"
 python.git = "https://github.com/crusaderky/cpython"
 python.rev = "tsan"
 python.subdirectory = "Tools/pixi-packages/asan"
-numpy.rev = "tsan-ft-pixi2"
-numpy.git = "https://github.com/crusaderky/numpy"
+numpy.git = "https://github.com/ngoldbaum/numpy"
+numpy.rev = "tsan-ft-pixi"
 numpy.subdirectory = "pixi-packages/asan"
 hdf5 = { path = "asan" }
 
