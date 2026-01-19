@@ -14,6 +14,11 @@ pixi r ctest
 pixi r cpack
 ```
 
+## Run clang-format
+```bash
+pixi r lint
+```
+
 ## Change HDF5 version
 After `git submodule init`, you may update the `hdf5` git submodule to repoint
 to a newer/older version of hdf5. Release 1.14 and older are not supported.

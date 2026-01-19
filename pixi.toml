@@ -34,6 +34,15 @@ ctest = { cwd = "build-local", cmd = "ctest --output-on-failure" }
 cpack = { cwd = "build-local", cmd = "cpack -V" }
 smoke-test = { cmd = "./smoke-test-local.sh" }
 
+# Linter settings must be kept aligned to
+# hdf5/.github/workflows/clang-format-fix.yml
+[feature.lint.dependencies]
+clang-format = "=17"
+
+[feature.lint.tasks]
+clang-format = { cwd = "hdf5", cmd = "find . -iname '*.h' -o -iname '*.cpp' -o -iname '*.c' -o -iname '*.hpp' -o -iname '*.java' | grep -v -E '^\\./config|^\\./hl/src/(H5LTanalyze\\.c|H5LTparse\\.[ch])|^\\./src/(H5Epubgen|H5Einit|H5Eterm|H5Edefin|H5version|H5overflow)\\.h' | xargs clang-format -i" }
+lint = { depends-on = ["clang-format"] }
+
 [feature.conda-test.tasks]
 smoke-test = { cmd = "./smoke-test-conda.sh" }
 
@@ -51,6 +60,7 @@ hdf5 = { path = "tsan" }
 DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
 
 [environments]
+lint = ["lint"]
 build = ["build"]
 conda-default = ["conda-test", "conda-default"]
 conda-asan = ["conda-test", "conda-san", "conda-asan"]

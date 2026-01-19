@@ -1,0 +1,40 @@
+name: local project
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch: # allows you to trigger manually
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+# When this workflow is queued, automatically cancel any previous running
+# or pending jobs from the same branch
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout hdf5-pixi and hdf5
+        uses: actions/checkout@v6
+        with:
+          submodules: 'true'
+
+      - uses: prefix-dev/setup-pixi@v0
+        with:
+          pixi-version: v0.63.2
+          environments: lint
+
+      - name: Run linters
+        run: pixi run lint
+
+      - name: Check for modified files
+        # This test will fail if clang-format version and command in
+        # pixi.toml become misaligned with the matching hdf5 github workflows.
+        run: git diff --exit-code
