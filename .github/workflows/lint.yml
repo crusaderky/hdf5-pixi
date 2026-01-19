@@ -21,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout hdf5-pixi and hdf5
+      - name: Checkout
         uses: actions/checkout@v6
         with:
           submodules: 'true'
