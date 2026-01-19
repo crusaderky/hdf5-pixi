@@ -1,4 +1,4 @@
-name: local project
+name: Code linters
 
 on:
   push:
