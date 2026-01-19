@@ -35,14 +35,14 @@ jobs:
           - tsan
 
     steps:
-      - name: Checkout hdf5-pixi and hdf5
+      - name: Checkout
         uses: actions/checkout@v6
         with:
           submodules: 'true'
 
       - uses: prefix-dev/setup-pixi@v0
         with:
-          pixi-version: v0.62.2
+          pixi-version: v0.63.2
           environments: build
 
       - name: List conda packages
