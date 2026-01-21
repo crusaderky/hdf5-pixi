@@ -23,7 +23,7 @@ clean = { cmd = "rm -rf build-*" }
 conda-list = "cd $CONDA_PREFIX && find ."
 
 [feature.build.dependencies]
-clang = "=21"
+clang = "*"
 cmake = "*"
 ninja = "*"
 
@@ -56,7 +56,7 @@ hdf5 = { path = "asan" }
 hdf5 = { path = "tsan" }
 
 [feature.h5py.dependencies]
-clang = "=21"
+clang = "*"
 pytest = "*"
 pytest-mpi = "*"
 # h5py build dependencies, needed for --no-build-isolation

@@ -15,7 +15,7 @@ build:
 
 requirements:
   build:
-    - clang=21
+    - clang
     - cmake
     - ninja
   host:
