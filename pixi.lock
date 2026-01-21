@@ -200,9 +200,9 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-64/libaec-1.1.4-h3f801dc_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/libcompiler-rt-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgcc-15.2.0-he0feb66_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgomp-15.2.0-he0feb66_16.conda
-      - conda: https://prefix.dev/conda-forge/linux-64/libsanitizer-15.2.0-h90f66d4_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: asan
@@ -210,27 +210,23 @@ environments:
       linux-aarch64:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/_openmp_mutex-4.5-2_gnu.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libaec-1.1.4-h1e66f74_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/libcompiler-rt-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgcc-15.2.0-h8acb6b2_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgomp-15.2.0-h8acb6b2_16.conda
-      - conda: https://prefix.dev/conda-forge/linux-aarch64/libsanitizer-15.2.0-he19c465_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libstdcxx-15.2.0-hef695bb_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: asan
         build: he8cfe8b_0
       osx-64:
-      - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt-21.1.8-h694c41f_0.conda
-      - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
-      - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libaec-1.1.4-ha6bc127_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/libcompiler-rt-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libcxx-21.1.8-h3d58e20_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libzlib-1.3.1-hd23fc13_2.conda
       - conda: asan
         build: h0dc7051_0
       osx-arm64:
-      - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt-21.1.8-hce30654_0.conda
-      - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
-      - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libaec-1.1.4-h51d1e36_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/libcompiler-rt-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libcxx-21.1.8-hf598326_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libzlib-1.3.1-h8359307_2.conda
       - conda: asan
@@ -282,9 +278,9 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-64/libaec-1.1.4-h3f801dc_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/libcompiler-rt-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgcc-15.2.0-he0feb66_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgomp-15.2.0-he0feb66_16.conda
-      - conda: https://prefix.dev/conda-forge/linux-64/libsanitizer-15.2.0-h90f66d4_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: tsan
@@ -292,27 +288,23 @@ environments:
       linux-aarch64:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/_openmp_mutex-4.5-2_gnu.tar.bz2
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libaec-1.1.4-h1e66f74_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/libcompiler-rt-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgcc-15.2.0-h8acb6b2_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgomp-15.2.0-h8acb6b2_16.conda
-      - conda: https://prefix.dev/conda-forge/linux-aarch64/libsanitizer-15.2.0-he19c465_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libstdcxx-15.2.0-hef695bb_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libzlib-1.3.1-h86ecc28_2.conda
       - conda: tsan
         build: he8cfe8b_0
       osx-64:
-      - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt-21.1.8-h694c41f_0.conda
-      - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
-      - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libaec-1.1.4-ha6bc127_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/libcompiler-rt-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libcxx-21.1.8-h3d58e20_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libzlib-1.3.1-hd23fc13_2.conda
       - conda: tsan
         build: h0dc7051_0
       osx-arm64:
-      - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt-21.1.8-hce30654_0.conda
-      - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
-      - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libaec-1.1.4-h51d1e36_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/libcompiler-rt-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libcxx-21.1.8-hf598326_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libzlib-1.3.1-h8359307_2.conda
       - conda: tsan
@@ -344,7 +336,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/compiler-rt21-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-64-21.1.8-hffcefe0_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-64-21.1.8-ha770c72_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -354,6 +346,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45-default_hbd61a6d_105.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libaec-1.1.4-h3f801dc_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libclang-cpp21.1-21.1.8-default_h99862b1_1.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/libcompiler-rt-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libexpat-2.7.3-hecca717_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libffi-3.5.2-h9ec8514_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgcc-15.2.0-he0feb66_16.conda
@@ -364,7 +357,6 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libllvm21-21.1.8-hf7376ad_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libmpdec-4.0.0-hb9d3cd8_0.conda
-      - conda: https://prefix.dev/conda-forge/linux-64/libsanitizer-15.2.0-h90f66d4_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libsqlite-3.51.2-hf4e2dac_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libuuid-2.41.3-h5347b49_0.conda
@@ -408,7 +400,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/compiler-rt21-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-aarch64-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-aarch64-21.1.8-h8af1aa0_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-aarch64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -418,6 +410,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ld_impl_linux-aarch64-2.45-default_h1979696_105.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libaec-1.1.4-h1e66f74_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libclang-cpp21.1-21.1.8-default_he95a3c9_1.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/libcompiler-rt-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libexpat-2.7.3-hfae3067_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libffi-3.5.2-hd65408f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgcc-15.2.0-h8acb6b2_16.conda
@@ -429,7 +422,6 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libllvm21-21.1.8-hfd2ba90_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/liblzma-5.8.2-he30d5cf_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libmpdec-4.0.0-h86ecc28_0.conda
-      - conda: https://prefix.dev/conda-forge/linux-aarch64/libsanitizer-15.2.0-he19c465_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libsqlite-3.51.2-h10b116e_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libstdcxx-15.2.0-hef695bb_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libuuid-2.41.3-h1022ec0_0.conda
@@ -473,7 +465,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-64-21.1.8-h694c41f_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -482,6 +474,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/ld64_osx-64-956.6-llvm21_1_h41cbea9_4.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libaec-1.1.4-ha6bc127_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libclang-cpp21.1-21.1.8-default_hd70426c_1.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/libcompiler-rt-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libcxx-21.1.8-h3d58e20_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libexpat-2.7.3-heffb93a_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libffi-3.5.2-h750e83c_0.conda
@@ -532,7 +525,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-arm64-21.1.8-hce30654_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-arm64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -542,6 +535,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/ld64_osx-arm64-956.6-llvm21_1_h3eeb6b3_4.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libaec-1.1.4-h51d1e36_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libclang-cpp21.1-21.1.8-default_hf3020a7_1.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/libcompiler-rt-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libcxx-21.1.8-hf598326_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libexpat-2.7.3-haf25636_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libffi-3.5.2-he5f378a_0.conda
@@ -603,7 +597,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/compiler-rt21-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-64-21.1.8-hffcefe0_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-64-21.1.8-ha770c72_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -666,7 +660,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/compiler-rt21-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-aarch64-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-aarch64-21.1.8-h8af1aa0_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-aarch64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -730,7 +724,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-64-21.1.8-h694c41f_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -789,7 +783,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-arm64-21.1.8-hce30654_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-arm64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -860,7 +854,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/compiler-rt21-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-64-21.1.8-hffcefe0_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-64-21.1.8-ha770c72_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -924,7 +918,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/compiler-rt21-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-aarch64-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-aarch64-21.1.8-h8af1aa0_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-aarch64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -989,7 +983,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-64-21.1.8-h694c41f_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1049,7 +1043,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-arm64-21.1.8-hce30654_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-arm64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1121,7 +1115,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/compiler-rt21-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-64-21.1.8-hffcefe0_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-64-21.1.8-ha770c72_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1131,6 +1125,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/ld_impl_linux-64-2.45-default_hbd61a6d_105.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libaec-1.1.4-h3f801dc_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libclang-cpp21.1-21.1.8-default_h99862b1_1.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/libcompiler-rt-21.1.8-hb700be7_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libexpat-2.7.3-hecca717_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libffi-3.5.2-h9ec8514_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libgcc-15.2.0-he0feb66_16.conda
@@ -1141,7 +1136,6 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/libllvm21-21.1.8-hf7376ad_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/liblzma-5.8.2-hb03c661_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libmpdec-4.0.0-hb9d3cd8_0.conda
-      - conda: https://prefix.dev/conda-forge/linux-64/libsanitizer-15.2.0-h90f66d4_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libsqlite-3.51.2-hf4e2dac_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_16.conda
       - conda: https://prefix.dev/conda-forge/linux-64/libuuid-2.41.3-h5347b49_0.conda
@@ -1186,7 +1180,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/compiler-rt21-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_linux-aarch64-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_linux-aarch64-21.1.8-h8af1aa0_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: linux-aarch64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1196,6 +1190,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ld_impl_linux-aarch64-2.45-default_h1979696_105.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libaec-1.1.4-h1e66f74_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libclang-cpp21.1-21.1.8-default_he95a3c9_1.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/libcompiler-rt-21.1.8-hfefdfc9_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libexpat-2.7.3-hfae3067_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libffi-3.5.2-hd65408f_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libgcc-15.2.0-h8acb6b2_16.conda
@@ -1207,7 +1202,6 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libllvm21-21.1.8-hfd2ba90_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/liblzma-5.8.2-he30d5cf_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libmpdec-4.0.0-h86ecc28_0.conda
-      - conda: https://prefix.dev/conda-forge/linux-aarch64/libsanitizer-15.2.0-he19c465_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libsqlite-3.51.2-h10b116e_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libstdcxx-15.2.0-hef695bb_16.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/libuuid-2.41.3-h1022ec0_0.conda
@@ -1252,7 +1246,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/compiler-rt21-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-64-21.1.8-he0f92a2_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-64-21.1.8-h694c41f_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1261,6 +1255,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-64/ld64_osx-64-956.6-llvm21_1_h41cbea9_4.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libaec-1.1.4-ha6bc127_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libclang-cpp21.1-21.1.8-default_hd70426c_1.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/libcompiler-rt-21.1.8-he914875_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libcxx-21.1.8-h3d58e20_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libexpat-2.7.3-heffb93a_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/libffi-3.5.2-h750e83c_0.conda
@@ -1312,7 +1307,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/compiler-rt21-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt21_osx-arm64-21.1.8-h2514db7_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/compiler-rt_osx-arm64-21.1.8-hce30654_0.conda
-      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+      - conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
         subdir: osx-arm64
       - conda: https://prefix.dev/conda-forge/noarch/cython-3.2.4-pyha292242_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
@@ -1322,6 +1317,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/ld64_osx-arm64-956.6-llvm21_1_h3eeb6b3_4.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libaec-1.1.4-h51d1e36_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libclang-cpp21.1-21.1.8-default_hf3020a7_1.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/libcompiler-rt-21.1.8-h855ad52_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libcxx-21.1.8-hf598326_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libexpat-2.7.3-haf25636_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/libffi-3.5.2-he5f378a_0.conda
@@ -2186,7 +2182,7 @@ packages:
   variants:
     target_platform: osx-64
   depends:
-  - compiler-rt
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2199,7 +2195,7 @@ packages:
   variants:
     target_platform: osx-arm64
   depends:
-  - compiler-rt
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2212,7 +2208,7 @@ packages:
   variants:
     target_platform: linux-64
   depends:
-  - libsanitizer
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2225,7 +2221,7 @@ packages:
   variants:
     target_platform: linux-aarch64
   depends:
-  - libsanitizer
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2286,7 +2282,7 @@ packages:
   variants:
     target_platform: osx-64
   depends:
-  - compiler-rt
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2299,7 +2295,7 @@ packages:
   variants:
     target_platform: osx-arm64
   depends:
-  - compiler-rt
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2312,7 +2308,7 @@ packages:
   variants:
     target_platform: linux-64
   depends:
-  - libsanitizer
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2325,7 +2321,7 @@ packages:
   variants:
     target_platform: linux-aarch64
   depends:
-  - libsanitizer
+  - libcompiler-rt
   - libaec >=1.1.4,<2.0a0
   - libzlib >=1.3.1,<2.0a0
   license: BSD-3-Clause
@@ -2694,6 +2690,49 @@ packages:
   license_family: Apache
   size: 13684478
   timestamp: 1767829416640
+- conda: https://prefix.dev/conda-forge/linux-64/libcompiler-rt-21.1.8-hb700be7_0.conda
+  sha256: 3cce8e5f0a948ae7b8fa13624898be6b9c373ea5bce580a4c803267115c938ef
+  md5: 22760e8835bd95013e7737729812bd91
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - libstdcxx >=14
+  constrains:
+  - compiler-rt >=9.0.1
+  license: Apache-2.0 WITH LLVM-exception
+  size: 11076211
+  timestamp: 1768840866750
+- conda: https://prefix.dev/conda-forge/linux-aarch64/libcompiler-rt-21.1.8-hfefdfc9_0.conda
+  sha256: 11c4a27fd6de319c57e6b324093548ffe17bf2920c549508f1e924fbf912ad68
+  md5: 57a67fdc352649fea188de01e6e88812
+  depends:
+  - libgcc >=14
+  - libstdcxx >=14
+  constrains:
+  - compiler-rt >=9.0.1
+  license: Apache-2.0 WITH LLVM-exception
+  size: 7874671
+  timestamp: 1768840920855
+- conda: https://prefix.dev/conda-forge/osx-64/libcompiler-rt-21.1.8-he914875_0.conda
+  sha256: 6a66b32a6381710430ba4de11309609a3d840ddbc2f33c6ba509137cd91fda9a
+  md5: 29f968691300f1e3420b82b4e8a77300
+  depends:
+  - __osx >=10.13
+  constrains:
+  - compiler-rt >=9.0.1
+  license: Apache-2.0 WITH LLVM-exception
+  size: 1333722
+  timestamp: 1768841964334
+- conda: https://prefix.dev/conda-forge/osx-arm64/libcompiler-rt-21.1.8-h855ad52_0.conda
+  sha256: e4833b4a48acb950abd9200113ba62d710de38c3d21ddc4360e55adf80545f28
+  md5: c0997283757fc9538cf52b5b5e33071d
+  depends:
+  - __osx >=11.0
+  constrains:
+  - compiler-rt >=9.0.1
+  license: Apache-2.0 WITH LLVM-exception
+  size: 1331708
+  timestamp: 1768841562235
 - conda: https://prefix.dev/conda-forge/linux-64/libcurl-8.18.0-h4e3cde8_0.conda
   sha256: 5454709d9fb6e9c3dd6423bc284fa7835a7823bfa8323f6e8786cdd555101fab
   md5: 0a5563efed19ca4461cf927419b6eb73
@@ -3328,27 +3367,6 @@ packages:
   license_family: MIT
   size: 575454
   timestamp: 1756835746393
-- conda: https://prefix.dev/conda-forge/linux-64/libsanitizer-15.2.0-h90f66d4_16.conda
-  sha256: 50d8082749e760454fb1489c2a47c6fa80cbf3893ec1c1a085747d46484ffd7f
-  md5: 0841a98bda756af037eb07d36cacada5
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=15.2.0
-  - libstdcxx >=15.2.0
-  license: GPL-3.0-only WITH GCC-exception-3.1
-  license_family: GPL
-  size: 7660762
-  timestamp: 1765256861607
-- conda: https://prefix.dev/conda-forge/linux-aarch64/libsanitizer-15.2.0-he19c465_16.conda
-  sha256: 71be6819f928574caf929aa4764a69e3df0429d686a4c5d6a8985b4c2c14b965
-  md5: 4e30740acf8527cc06ca6a8d81432536
-  depends:
-  - libgcc >=15.2.0
-  - libstdcxx >=15.2.0
-  license: GPL-3.0-only WITH GCC-exception-3.1
-  license_family: GPL
-  size: 7460968
-  timestamp: 1765257008136
 - conda: https://prefix.dev/conda-forge/osx-64/libsigtool-0.1.3-hc0f2934_0.conda
   sha256: f87b743d5ab11c1a8ddd800dd9357fc0fabe47686068232ddc1d1eed0d7321ec
   md5: 3576aba85ce5e9ab15aa0ea376ab864b
@@ -4385,7 +4403,7 @@ packages:
   license_family: MIT
   size: 23601
   timestamp: 1768437488141
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_asan_cp315
@@ -4421,7 +4439,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_asan_cp315
@@ -4457,7 +4475,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_asan_cp315
@@ -4490,7 +4508,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fasan&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_asan_cp315
@@ -4523,7 +4541,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315
@@ -4559,7 +4577,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315
@@ -4595,7 +4613,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315
@@ -4628,7 +4646,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Fdefault&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315
@@ -4661,7 +4679,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315t
@@ -4696,7 +4714,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315t
@@ -4731,7 +4749,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315t
@@ -4763,7 +4781,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ffreethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_cp315t
@@ -4795,7 +4813,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_tsan_cp315t
@@ -4830,7 +4848,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_tsan_cp315t
@@ -4865,7 +4883,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_tsan_cp315t
@@ -4897,7 +4915,7 @@ packages:
     python_abi:
       path: .
   python_site_packages_path: lib/python3.15t/site-packages
-- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=tsan#a5b2d1c95646d312c7088cf9614e9a421c3a167b
+- conda: git+https://github.com/crusaderky/cpython?subdirectory=Tools%2Fpixi-packages%2Ftsan-freethreading&rev=fd6ca6da5494ee0958e8b400f49b014fa888ac78#fd6ca6da5494ee0958e8b400f49b014fa888ac78
   name: python
   version: '3.15'
   build: 0_tsan_cp315t
