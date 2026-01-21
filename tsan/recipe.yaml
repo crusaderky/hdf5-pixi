@@ -22,12 +22,7 @@ requirements:
     - libaec
     - zlib
   run:
-    - if: linux
-      then:
-        - libsanitizer
-    - if: osx
-      then:
-        - compiler-rt
+    - libcompiler-rt
 
 about:
   homepage: https://www.hdfgroup.org/solutions/hdf5/
