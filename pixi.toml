@@ -55,10 +55,6 @@ hdf5 = { path = "asan" }
 [feature.conda-tsan.dependencies]
 hdf5 = { path = "tsan" }
 
-[feature.conda-san.target.osx.activation.env]
-# clang version must match {asan,tsan}/recipe.yaml
-DYLD_LIBRARY_PATH = "$CONDA_PREFIX/lib/clang/21/lib/darwin"
-
 [feature.h5py.dependencies]
 clang = "=21"
 pytest = "*"
@@ -136,8 +132,8 @@ LDFLAGS = "-g -fsanitize=thread"
 lint = ["lint"]
 build = ["build"]
 conda-default = ["conda-test", "conda-default"]
-conda-asan = ["conda-test", "conda-san", "conda-asan"]
-conda-tsan = ["conda-test", "conda-san", "conda-tsan"]
+conda-asan = ["conda-test", "conda-asan"]
+conda-tsan = ["conda-test", "conda-tsan"]
 h5py-default = ["conda-test", "h5py", "h5py-default"]
 h5py-freethreading = ["conda-test", "h5py", "h5py-freethreading"]
 h5py-asan = ["conda-test", "h5py", "h5py-asan"]

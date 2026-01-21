@@ -27,8 +27,7 @@ jobs:
         os:
           - ubuntu-latest # x86-64
           - ubuntu-24.04-arm # ARM
-          # FIXME https://github.com/python/cpython/pull/142872#issuecomment-3773029139
-          # - macos-15-intel # x86-64
+          - macos-15-intel # x86-64
           - macos-latest # ARM
         variant:
           - default
