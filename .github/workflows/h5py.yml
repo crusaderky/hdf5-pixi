@@ -57,7 +57,7 @@ jobs:
         run: pixi run -e h5py-${{ matrix.variant }} h5py-install
     
       - name: Smoke test
-        run: pixi run -e h5py-${{ matrix.variant }} h5py-smoke-test
+        run: pixi run -e h5py-${{ matrix.variant }} smoke-test
 
       - name: Pytest
         run: pixi run -e h5py-${{ matrix.variant }} h5py-pytest

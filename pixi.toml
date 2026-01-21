@@ -7,7 +7,7 @@ preview = ["pixi-build"]
 clean = "rm -rf build-*"
 conda-list = "cd $CONDA_PREFIX && find ."
 
-[feature.build.activation.env]
+[feature.local.activation.env]
 CC = "clang"
 CMAKE_BUILD_PARALLEL_LEVEL = "4"
 CTEST_PARALLEL_LEVEL = "4"
@@ -22,12 +22,12 @@ CMAKE_BUILD_TYPE = "Debug"
 # LDFLAGS="-fsanitize=thread"
 HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON -DHDF5_ENABLE_COVERAGE=ON"
 
-[feature.build.dependencies]
+[feature.local.dependencies]
 clang = "*"
 cmake = "*"
 ninja = "*"
 
-[feature.build.tasks]
+[feature.local.tasks]
 config = "cmake -S hdf5 -B build-local $HDF5_CONFIG_ARGS"
 cmake = { cwd = "build-local", cmd = "cmake --build .", depends-on = ["config"] }
 ctest = { cwd = "build-local", cmd = "ctest --output-on-failure" }
@@ -70,8 +70,8 @@ CC = "h5cc"
 
 [feature.h5py.tasks]
 h5py-install = "python -m pip install h5py/ -vv --no-build-isolation --no-dependencies"
-h5py-smoke-test = "python h5py-smoke-test.py"
 h5py-pytest = "python -m pytest --pyargs h5py -sv"
+smoke-test = "./smoke-test-conda.sh && echo && python smoke-test-h5py.py"
 
 [feature.h5py-default.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
@@ -130,11 +130,11 @@ LDFLAGS = "-g -fsanitize=thread"
 
 [environments]
 lint = ["lint"]
-build = ["build"]
+local = ["local"]
 conda-default = ["conda-test", "conda-default"]
 conda-asan = ["conda-test", "conda-asan"]
 conda-tsan = ["conda-test", "conda-tsan"]
-h5py-default = ["conda-test", "h5py", "h5py-default"]
-h5py-freethreading = ["conda-test", "h5py", "h5py-freethreading"]
-h5py-asan = ["conda-test", "h5py", "h5py-asan"]
-h5py-tsan-freethreading = ["conda-test", "h5py", "h5py-tsan-freethreading"]
+h5py-default = ["h5py", "h5py-default"]
+h5py-freethreading = ["h5py", "h5py-freethreading"]
+h5py-asan = ["h5py", "h5py-asan"]
+h5py-tsan-freethreading = ["h5py", "h5py-tsan-freethreading"]

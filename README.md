@@ -5,14 +5,15 @@ Supports variant builds with (e.g. ASAN, TSAN).
 Additionally, this project can build the whole h5py stack
 (python, numpy, hdf5, h5py) with ASAN.
 
-# Usage
+# Build and test HDF5 locally
 
-## Build, test, and package HDF5
+## Build, test, and package
 ```bash
 git clone https://github.com/crusaderky/hdf5-pixi.git
 cd hdf5-pixi
 git submodule init
 pixi r cmake
+pixi r -e local smoke-test
 pixi r ctest
 pixi r cpack
 ```
@@ -28,7 +29,7 @@ to a newer/older version of hdf5. Release 1.14 and older are not supported.
 You should update the version number in `{default,asan,tsan}/recipe.yaml` accordingly.
 After the change, you should run `pixi r clean`.
 
-## Use in downstream pixi projects
+# Use hdf5 in downstream pixi projects
 In the `pixi.toml` of your project, change
 ```toml
 [workspace]
@@ -55,7 +56,7 @@ hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "defaul
 hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "asan" }
 hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "tsan" }
 # Or a local git checkout, e.g if you are actively tampering with files in the
-# hdf5/ submodule
+# hdf5/ submodule, or if you're using hdf5-pixi as a git submodule.
 hdf5 = { path = "/my/projects/hdf5-pixi/default" }
 hdf5 = { path = "/my/projects/hdf5-pixi/asan" }
 hdf5 = { path = "/my/projects/hdf5-pixi/tsan" }
@@ -64,12 +65,12 @@ hdf5 = { path = "/my/projects/hdf5-pixi/tsan" }
 You will need to recompile downstream packages, such as
 `h5py` or `versioned-hdf5`, from sources.
 
-## h5py
+# h5py
 
 Installs python, numpy, hdf5, and h5py all on git tip:
 ```bash
 pixi r -e h5py-default h5py-install
-pixi r -e h5py-default h5py-smoke-test  # Print versions and exit
+pixi r -e h5py-default smoke-test   # Print versions and exit
 pixi r -e h5py-default h5py-pytest  # Run the full pytest suite
 ```
 You may use the following environments:
@@ -83,9 +84,9 @@ CPython and NumPy are built as of the current git tip.
 HDF5 and h5py are built from their respective git subprojects 
 `hdf5/` and `h5py/`.
 
-## Troubleshooting
+# Troubleshooting
 
-### Dirty local cache
+## Dirty local cache
 The local build and test commands `pixi r {cmake,ctest,cpack}` use the
 build cache directory `build-local`. After a change in `hdf5/`, you should
 be able to quickly rebuild just what changed.
@@ -93,7 +94,7 @@ be able to quickly rebuild just what changed.
 When in doubt, though, you should run `pixi r clean` to start from a clean slate.
 You should always do it after changing any compilation flags.
 
-### Dirty rattler cache
+## Dirty rattler cache
 If you're using this in a downstream pixi project, and anything changes in `hdf5/`,
 pixi won't realize that the hdf5 binary that's in the rattler cache is
 obsolete. *In your project*, run
@@ -111,7 +112,7 @@ To clean them, run `pixi r clean`.
 The three variants `default`, `asan`, and `tsan` are separate and you don't need
 to clean the cache if you're just switching between them.
 
-### TSAN crashes on Linux
+## TSAN crashes on Linux
 TSAN builds may crash on Linux with
 ```
 FATAL: ThreadSanitizer: unexpected memory mapping 0x7977bd072000-0x7977bd500000

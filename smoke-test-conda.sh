@@ -11,3 +11,4 @@ fi
 test -f $CONDA_PREFIX/lib/$DLL_NAME
 test -f $CONDA_PREFIX/include/hdf5.h
 h5ls --help > /dev/null
+echo "HDF5 smoke test passed."
