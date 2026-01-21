@@ -15,7 +15,7 @@ build:
 
 requirements:
   build:
-    - clang=21
+    - clang
     - cmake
     - ninja
   host:
@@ -27,7 +27,7 @@ requirements:
         - libsanitizer
     - if: osx
       then:
-        - compiler-rt=21  # Must match clang version above
+        - compiler-rt
 
 about:
   homepage: https://www.hdfgroup.org/solutions/hdf5/
