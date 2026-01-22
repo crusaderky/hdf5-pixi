@@ -43,13 +43,13 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0
         with:
           pixi-version: v0.63.2
-          environments: build
+          environments: local
 
       - name: List conda packages
-        run: pixi ls -e build
+        run: pixi ls -e local
 
       - name: List files in conda environment
-        run: pixi run -e build conda-list
+        run: pixi run -e local conda-list
 
       - name: set CFLAGS for ASAN
         if: matrix.variant == 'asan'
@@ -69,7 +69,7 @@ jobs:
         run: pixi run cmake
 
       - name: smoke test
-        run: pixi run -e build smoke-test
+        run: pixi run -e local smoke-test
 
       - name: ctest
         if: matrix.variant != 'tsan'  # FIXME many upstream test failures
@@ -84,4 +84,4 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: hdf5-pixi-${{ matrix.os }}-${{ matrix.variant }}
-          path: build/HDF5-*
+          path: build-local/HDF5-*
