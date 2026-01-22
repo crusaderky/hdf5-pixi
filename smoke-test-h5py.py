@@ -16,3 +16,5 @@ print("h5py version  :", h5py.__version__, "(may not be accurate for git tip)")
 with tempfile.TemporaryDirectory() as tmpdir:
     with h5py.File(f"{tmpdir}/test.h5", "w") as f:
         f.create_dataset("x", data=[1, 2, 3])
+
+print("h5py smoke test passed.")

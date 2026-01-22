@@ -27,7 +27,8 @@ jobs:
         os:
           - ubuntu-latest # x86-64
           - ubuntu-24.04-arm # ARM
-          # FIXME https://github.com/python/cpython/pull/142872#issuecomment-3773029139
+          # FIXME segfault in h5py/tests/test_h5z.py::test_register_filter
+          # FIXME numpy build fails
           # - macos-15-intel # x86-64
           - macos-latest # ARM
         variant:
@@ -55,9 +56,9 @@ jobs:
 
       - name: Build and install h5py
         run: pixi run -e h5py-${{ matrix.variant }} h5py-install
-    
+  
       - name: Smoke test
-        run: pixi run -e h5py-${{ matrix.variant }} h5py-smoke-test
+        run: pixi run -e h5py-${{ matrix.variant }} smoke-test
 
       - name: Pytest
         run: pixi run -e h5py-${{ matrix.variant }} h5py-pytest

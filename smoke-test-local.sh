@@ -13,3 +13,4 @@ fi
 
 test -f $DLL_NAME
 ./h5ls --help > /dev/null
+echo "HDF5 smoke test passed."
