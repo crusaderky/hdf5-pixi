@@ -20,10 +20,9 @@ requirements:
     - ninja
     - libaec  # for szip support
     - zlib
-  host:
-    - libaec  # for szip support
-    - zlib
   run:
+    - libaec
+    - zlib
     - libcompiler-rt
 
 about:
