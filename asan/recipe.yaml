@@ -18,6 +18,8 @@ requirements:
     - clang
     - cmake
     - ninja
+    - libaec  # for szip support
+    - zlib
   host:
     - libaec  # for szip support
     - zlib
