@@ -20,12 +20,14 @@ CMAKE_BUILD_TYPE = "Debug"
 # LDFLAGS="-fsanitize=address"
 # CFLAGS="-fsanitize=thread"
 # LDFLAGS="-fsanitize=thread"
-HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON -DHDF5_ENABLE_COVERAGE=ON"
+HDF5_CONFIG_ARGS = "-DHDF5_ENABLE_DEBUG_APIS=ON -DHDF5_ENABLE_TRACE=ON -DHDF5_ENABLE_COVERAGE=ON -DHDF5_ENABLE_ZLIB_SUPPORT=ON -DHDF5_ENABLE_SZIP_SUPPORT=ON"
 
 [feature.local.dependencies]
 clang = "*"
 cmake = "*"
 ninja = "*"
+zlib = "*"
+libaec = "*"  # for szip support
 
 [feature.local.tasks]
 config = "cmake -S hdf5 -B build-local $HDF5_CONFIG_ARGS"
