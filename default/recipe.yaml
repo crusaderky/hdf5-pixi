@@ -17,7 +17,7 @@ requirements:
     - cmake
     - ninja
   host:
-    - libaec
+    - libaec  # for szip support
     - zlib
 
 about:

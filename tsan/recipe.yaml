@@ -19,7 +19,7 @@ requirements:
     - cmake
     - ninja
   host:
-    - libaec
+    - libaec  # for szip support
     - zlib
   run:
     - libcompiler-rt
