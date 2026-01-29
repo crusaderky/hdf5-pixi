@@ -18,8 +18,8 @@ requirements:
     - ninja
     - libaec  # for szip support
     - zlib
-  host:
-    - libaec  # for szip support
+  run:
+    - libaec
     - zlib
 
 about:
