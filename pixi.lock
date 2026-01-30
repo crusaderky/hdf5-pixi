@@ -1427,6 +1427,24 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/zlib-1.3.1-h8359307_2.conda
       - conda: pixi-packages/hdf5/default
         build: h5dc08da_0
+  pixi-minimal:
+    channels:
+    - url: https://prefix.dev/conda-forge/
+    options:
+      pypi-prerelease-mode: if-necessary-or-explicit
+    packages:
+      linux-64:
+      - conda: pixi-packages/hdf5/minimal
+        build: h2e978be_0
+      linux-aarch64:
+      - conda: pixi-packages/hdf5/minimal
+        build: hc6ac7fc_0
+      osx-64:
+      - conda: pixi-packages/hdf5/minimal
+        build: haa472df_0
+      osx-arm64:
+      - conda: pixi-packages/hdf5/minimal
+        build: heb040c6_0
   pixi-tsan:
     channels:
     - url: https://prefix.dev/conda-forge/
@@ -2336,6 +2354,46 @@ packages:
   depends:
   - libaec
   - zlib
+  license: BSD-3-Clause
+  license_family: BSD
+- conda: pixi-packages/hdf5/minimal
+  name: hdf5
+  version: 2.1.0
+  build: h2e978be_0
+  subdir: linux-64
+  variants:
+    target_platform: linux-64
+    variant: minimal
+  license: BSD-3-Clause
+  license_family: BSD
+- conda: pixi-packages/hdf5/minimal
+  name: hdf5
+  version: 2.1.0
+  build: haa472df_0
+  subdir: osx-64
+  variants:
+    target_platform: osx-64
+    variant: minimal
+  license: BSD-3-Clause
+  license_family: BSD
+- conda: pixi-packages/hdf5/minimal
+  name: hdf5
+  version: 2.1.0
+  build: hc6ac7fc_0
+  subdir: linux-aarch64
+  variants:
+    target_platform: linux-aarch64
+    variant: minimal
+  license: BSD-3-Clause
+  license_family: BSD
+- conda: pixi-packages/hdf5/minimal
+  name: hdf5
+  version: 2.1.0
+  build: heb040c6_0
+  subdir: osx-arm64
+  variants:
+    target_platform: osx-arm64
+    variant: minimal
   license: BSD-3-Clause
   license_family: BSD
 - conda: pixi-packages/hdf5/tsan

@@ -53,17 +53,25 @@ preview = ["pixi-build"]
 # Choose one
 ############
 hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/default" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/minimal" }
 hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/asan" }
 hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/tsan" }
 # Or a local git checkout, e.g if you are actively tampering with files in the
 # hdf5/ submodule, or if you're using hdf5-pixi as a git submodule.
 hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/default" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/minimal" }
 hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/asan" }
 hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/tsan" }
 ```
 
 You will need to recompile downstream packages, such as
 `h5py` or `versioned-hdf5`, from sources.
+
+The four variants are:
+- **default:** with zlib/deflate/gzip and szip compression
+- **minimal:** no compression, no extra dependencies
+- **asan:** Address Sanitizer enabled, with compression
+- **tsan:** Thread Sanitizer enabled, with compression
 
 # h5py
 

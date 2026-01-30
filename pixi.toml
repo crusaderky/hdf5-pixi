@@ -50,6 +50,9 @@ smoke-test = "scripts/smoke-test-conda.sh"
 [feature.pixi-default.dependencies]
 hdf5.path = "pixi-packages/hdf5/default"
 
+[feature.pixi-minimal.dependencies]
+hdf5.path = "pixi-packages/hdf5/minimal"
+
 [feature.pixi-asan.dependencies]
 hdf5.path = "pixi-packages/hdf5/asan"
 
@@ -133,6 +136,7 @@ LDFLAGS = "-g -fsanitize=thread"
 lint = ["lint"]
 local = ["local"]
 pixi-default = ["pixi-default", "conda-test"]
+pixi-minimal = ["pixi-minimal", "conda-test"]
 pixi-asan = ["pixi-asan", "conda-test"]
 pixi-tsan = ["pixi-tsan", "conda-test"]
 h5py-default = ["h5py", "h5py-default"]
