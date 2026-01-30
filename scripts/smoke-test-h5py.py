@@ -1,3 +1,12 @@
+"""Smoke test for h5py
+Must run after: `pixi r -e <env> h5py-install`
+Invoked by    : `pixi r -e <env> smoke-test`
+When <env> is one of:
+  - h5py-default
+  - h5py-freethreading
+  - h5py-asan
+  - h5py-tsan-freethreading
+"""
 import tempfile
 import sys
 

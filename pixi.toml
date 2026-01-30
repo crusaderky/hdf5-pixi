@@ -33,7 +33,7 @@ config = "cmake -S hdf5 -B $CONDA_PREFIX/build $HDF5_CONFIG_ARGS"
 cmake = { cmd = "cmake --build $CONDA_PREFIX/build", depends-on = ["config"] }
 ctest = "ctest --output-on-failure --build $CONDA_PREFIX/build"
 cpack = "cd $CONDA_PREFIX/build && cpack -V && mkdir -p $PIXI_PROJECT_ROOT/dist && mv HDF5-2.* $PIXI_PROJECT_ROOT/dist/"
-smoke-test = "./smoke-test-local.sh"
+smoke-test = "scripts/smoke-test-local.sh"
 
 # Linter settings must be kept aligned to
 # hdf5/.github/workflows/clang-format-fix.yml
@@ -45,7 +45,7 @@ clang-format = { cwd = "hdf5", cmd = "find . -iname '*.h' -o -iname '*.cpp' -o -
 lint = { depends-on = ["clang-format"] }
 
 [feature.conda-test.tasks]
-smoke-test = "./smoke-test-conda.sh"
+smoke-test = "scripts/smoke-test-conda.sh"
 
 [feature.pixi-default.dependencies]
 hdf5.path = "pixi-packages/hdf5/default"
@@ -72,7 +72,7 @@ CC = "h5cc"
 [feature.h5py.tasks]
 h5py-install = "python -m pip install h5py/ -vv --no-build-isolation --no-dependencies"
 h5py-pytest = "python -m pytest --pyargs h5py -sv"
-smoke-test = "./smoke-test-conda.sh && echo && python smoke-test-h5py.py"
+smoke-test = "scripts/smoke-test-conda.sh && echo && python scripts/smoke-test-h5py.py"
 
 [feature.h5py-default.dependencies]
 python.git = "https://github.com/crusaderky/cpython"
@@ -132,9 +132,9 @@ LDFLAGS = "-g -fsanitize=thread"
 [environments]
 lint = ["lint"]
 local = ["local"]
-pixi-default = ["conda-test", "pixi-default"]
-pixi-asan = ["conda-test", "pixi-asan"]
-pixi-tsan = ["conda-test", "pixi-tsan"]
+pixi-default = ["pixi-default", "conda-test"]
+pixi-asan = ["pixi-asan", "conda-test"]
+pixi-tsan = ["pixi-tsan", "conda-test"]
 h5py-default = ["h5py", "h5py-default"]
 h5py-freethreading = ["h5py", "h5py-freethreading"]
 h5py-asan = ["h5py", "h5py-asan"]
