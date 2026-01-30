@@ -1,4 +1,4 @@
-name: local project
+name: HDF5 local build
 
 on:
   push:
@@ -83,5 +83,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v6
         with:
-          name: hdf5-pixi-${{ matrix.os }}-${{ matrix.variant }}
-          path: build-local/HDF5-*
+          name: hdf5-${{ matrix.os }}-${{ matrix.variant }}
+          path: dist/*

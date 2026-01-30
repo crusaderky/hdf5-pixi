@@ -15,7 +15,7 @@ git submodule init
 pixi r cmake
 pixi r -e local smoke-test
 pixi r ctest
-pixi r cpack
+pixi r cpack  # Creates artefacts in dist/
 ```
 
 ## Run clang-format
@@ -52,14 +52,14 @@ preview = ["pixi-build"]
 ############
 # Choose one
 ############
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "default" }
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "asan" }
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "tsan" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/default" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/asan" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/tsan" }
 # Or a local git checkout, e.g if you are actively tampering with files in the
 # hdf5/ submodule, or if you're using hdf5-pixi as a git submodule.
-hdf5 = { path = "/my/projects/hdf5-pixi/default" }
-hdf5 = { path = "/my/projects/hdf5-pixi/asan" }
-hdf5 = { path = "/my/projects/hdf5-pixi/tsan" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/default" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/asan" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/tsan" }
 ```
 
 You will need to recompile downstream packages, such as
@@ -86,31 +86,17 @@ HDF5 and h5py are built from their respective git subprojects
 
 # Troubleshooting
 
-## Dirty local cache
-The local build and test commands `pixi r {cmake,ctest,cpack}` use the
-build cache directory `build-local`. After a change in `hdf5/`, you should
-be able to quickly rebuild just what changed.
+## Dirty cache
+The local build and test commands `pixi r {cmake,ctest,cpack}` use the build cache
+directory `.pixi/envs/local/build`. After a change in `hdf5/`, you should be able to
+quickly rebuild just what changed. When in doubt, though, you should run `pixi clean` to
+start from a clean slate. You should always do it after changing any compilation flags.
 
-When in doubt, though, you should run `pixi r clean` to start from a clean slate.
-You should always do it after changing any compilation flags.
-
-## Dirty rattler cache
-If you're using this in a downstream pixi project, and anything changes in `hdf5/`,
-pixi won't realize that the hdf5 binary that's in the rattler cache is
-obsolete. *In your project*, run
-
-```bash
-pixi clean
-pixi clean cache -y
-```
-
-to force a rebuild. If you're pointing a local deployment of `hdf5-pixi`, it will
-use the local `hdf5-pixi/build-{default,asan,tsan}` directory.
-
-To clean them, run `pixi r clean`.
-
-The three variants `default`, `asan`, and `tsan` are separate and you don't need
-to clean the cache if you're just switching between them.
+If you're using this in a downstream pixi project, and anything changes in `hdf5/`, pixi
+won't realize that the hdf5 binary that's in the rattler cache is obsolete. *In your
+project*, run `pixi clean && pixi clean cache -y` to force a rebuild. The three variants
+`default`, `asan`, and `tsan` are separate and you don't need to clean the cache if
+you're just switching between them.
 
 ## TSAN crashes on Linux
 TSAN builds may crash on Linux with

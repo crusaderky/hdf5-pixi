@@ -7,9 +7,9 @@ package:
 
 build:
   script:
-    file: ../conda-build.sh
+    file: ../build.sh
     env:
-      BUILD_DIR: build-default
+      HDF5_VARIANT: ${{ variant }}
 
 requirements:
   build:
@@ -21,6 +21,9 @@ requirements:
   run:
     - libaec
     - zlib
+    - if: '"san" in variant'
+      then:
+        - libcompiler-rt
 
 about:
   homepage: https://www.hdfgroup.org/solutions/hdf5/

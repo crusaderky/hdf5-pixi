@@ -1,7 +1,12 @@
 #!/bin/bash
-set -xe
+# Smoke test for local build of HDF5
+# Must run after: `pixi r cmake`
+# Invoked by    : `pixi r -e local smoke-test`
 
-cd build-local/bin/
+set -o errexit
+set -o nounset
+
+cd $CONDA_PREFIX/build/bin/
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     DLL_NAME=libhdf5.so
