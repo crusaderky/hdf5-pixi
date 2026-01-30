@@ -15,7 +15,7 @@ git submodule init
 pixi r cmake
 pixi r -e local smoke-test
 pixi r ctest
-pixi r cpack
+pixi r cpack  # Creates artefacts in dist/
 ```
 
 ## Run clang-format
@@ -52,14 +52,14 @@ preview = ["pixi-build"]
 ############
 # Choose one
 ############
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "default" }
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "asan" }
-hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "tsan" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/default" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/default" }
+hdf5 = { git = "https://github.com/crusaderky/hdf5-pixi", subdirectory = "pixi-packages/hdf5/default" }
 # Or a local git checkout, e.g if you are actively tampering with files in the
 # hdf5/ submodule, or if you're using hdf5-pixi as a git submodule.
-hdf5 = { path = "/my/projects/hdf5-pixi/default" }
-hdf5 = { path = "/my/projects/hdf5-pixi/asan" }
-hdf5 = { path = "/my/projects/hdf5-pixi/tsan" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/default" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/asan" }
+hdf5 = { path = "/my/projects/hdf5-pixi/pixi-packages/hdf5/tsan" }
 ```
 
 You will need to recompile downstream packages, such as
@@ -87,11 +87,11 @@ HDF5 and h5py are built from their respective git subprojects
 # Troubleshooting
 
 ## Dirty local cache
-The local build and test commands `pixi r {cmake,ctest,cpack}` use the
-build cache directory `build-local`. After a change in `hdf5/`, you should
-be able to quickly rebuild just what changed.
+The local build and test commands `pixi r {cmake,ctest,cpack}` use the build cache
+directory `.pixi/envs/local/build`. After a change in `hdf5/`, you should be able to
+quickly rebuild just what changed.
 
-When in doubt, though, you should run `pixi r clean` to start from a clean slate.
+When in doubt, though, you should run `pixi clean` to start from a clean slate.
 You should always do it after changing any compilation flags.
 
 ## Dirty rattler cache
