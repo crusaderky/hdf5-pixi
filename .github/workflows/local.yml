@@ -1,4 +1,4 @@
-name: local project
+name: HDF5 local build
 
 on:
   push:

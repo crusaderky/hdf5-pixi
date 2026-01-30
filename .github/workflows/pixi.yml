@@ -1,4 +1,4 @@
-name: HDF5 pixi rattler-build recipe
+name: HDF5 pixi-build
 
 on:
   push:

@@ -6,7 +6,7 @@
 set -o errexit
 set -o nounset
 
-cd $CONDA_PREFIX/build/
+cd $CONDA_PREFIX/build/bin/
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     DLL_NAME=libhdf5.so
