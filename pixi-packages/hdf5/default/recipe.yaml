@@ -16,11 +16,15 @@ requirements:
     - clang
     - cmake
     - ninja
-    - libaec  # for szip support
-    - zlib
+    - if: variant != "minimal"
+      then:
+        - libaec  # for szip support
+        - zlib
   run:
-    - libaec
-    - zlib
+    - if: variant != "minimal"
+      then:
+        - libaec
+        - zlib
     - if: '"san" in variant'
       then:
         - libcompiler-rt
