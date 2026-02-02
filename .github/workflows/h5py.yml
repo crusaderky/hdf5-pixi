@@ -62,3 +62,7 @@ jobs:
 
       - name: Pytest
         run: pixi run -e h5py-${{ matrix.variant }} h5py-pytest
+
+      - name: Parallel Pytest
+        if: contains(matrix.variant, 'freethreading')
+        run: pixi run -e h5py-${{ matrix.variant }} h5py-pytest --parallel-threads=4
