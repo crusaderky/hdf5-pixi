@@ -48,26 +48,27 @@ lint = { depends-on = ["clang-format"] }
 smoke-test = "scripts/smoke-test-conda.sh"
 
 [feature.pixi-default.dependencies]
-hdf5.path = "pixi-packages/hdf5/default"
+hdf5 = { path = "pixi-packages/hdf5/default" }
 
 [feature.pixi-minimal.dependencies]
-hdf5.path = "pixi-packages/hdf5/minimal"
+hdf5 = { path = "pixi-packages/hdf5/minimal" }
 
 [feature.pixi-asan.dependencies]
-hdf5.path = "pixi-packages/hdf5/asan"
+hdf5 = { path = "pixi-packages/hdf5/asan" }
 
 [feature.pixi-tsan.dependencies]
-hdf5.path = "pixi-packages/hdf5/tsan"
+hdf5 = { path = "pixi-packages/hdf5/tsan" }
 
 [feature.h5py.dependencies]
-clang = "*"
 pytest = "*"
 pytest-mpi = "*"
 # h5py build dependencies, needed for --no-build-isolation
+clang = "*"
+cython = "*"
 packaging = "*"
+pip = "*"
 pkgconfig = "*"
 setuptools = "*"
-cython = "*"
 
 [feature.h5py.activation.env]
 CC = "h5cc"
@@ -78,26 +79,22 @@ h5py-pytest = "python -m pytest --pyargs h5py -sv"
 smoke-test = "scripts/smoke-test-conda.sh && echo && python scripts/smoke-test-h5py.py"
 
 [feature.h5py-default.dependencies]
-python.git = "https://github.com/crusaderky/cpython"
-python.rev = "tsan"
-python.subdirectory = "Tools/pixi-packages/default"
-numpy.git = "https://github.com/ngoldbaum/numpy"
-numpy.rev = "tsan-ft-pixi"
-numpy.subdirectory = "pixi-packages/default"
-hdf5.path = "pixi-packages/hdf5/default"
+# python = { git = "https://github.com/python/cpython", subdirectory = "Tools/pixi-packages/default" }
+python = "*"
+# numpy = { git = "https://github.com/ngoldbaum/numpy", rev = "tsan-ft-pixi", subdirectory = "pixi-packages/default" }
+numpy = "*"
+hdf5 = { path = "pixi-packages/hdf5/default" }
 
 [feature.h5py-default.activation.env]
 CFLAGS = "-g"
 LDFLAGS = "-g"
 
 [feature.h5py-freethreading.dependencies]
-python.git = "https://github.com/crusaderky/cpython"
-python.rev = "tsan"
-python.subdirectory = "Tools/pixi-packages/freethreading"
-numpy.git = "https://github.com/ngoldbaum/numpy"
-numpy.rev = "tsan-ft-pixi"
-numpy.subdirectory = "pixi-packages/freethreading"
-hdf5.path = "pixi-packages/hdf5/default"
+# python = { git = "https://github.com/python/cpython", subdirectory = "Tools/pixi-packages/freethreading" }
+python-freethreading = "*"
+# numpy = { git = "https://github.com/ngoldbaum/numpy", rev = "tsan-ft-pixi", subdirectory = "pixi-packages/freethreading" }
+numpy = "*"
+hdf5 = { path = "pixi-packages/hdf5/default" }
 pytest-run-parallel = "*"
 
 [feature.h5py-freethreading.activation.env]
@@ -105,13 +102,9 @@ CFLAGS = "-g"
 LDFLAGS = "-g"
 
 [feature.h5py-asan.dependencies]
-python.git = "https://github.com/crusaderky/cpython"
-python.rev = "tsan"
-python.subdirectory = "Tools/pixi-packages/asan"
-numpy.git = "https://github.com/ngoldbaum/numpy"
-numpy.rev = "tsan-ft-pixi"
-numpy.subdirectory = "pixi-packages/asan"
-hdf5.path = "pixi-packages/hdf5/asan"
+python = { git = "https://github.com/python/cpython", subdirectory = "Tools/pixi-packages/asan" }
+numpy = { git = "https://github.com/ngoldbaum/numpy", rev = "tsan-ft-pixi", subdirectory = "pixi-packages/asan" }
+hdf5 = { path = "pixi-packages/hdf5/asan" }
 
 [feature.h5py-asan.activation.env]
 ASAN_OPTIONS = "detect_leaks=0:symbolize=1:strict_init_order=true:allocator_may_return_null=1:use_sigaltstack=0"
@@ -119,13 +112,9 @@ CFLAGS = "-g -fsanitize=address"
 LDFLAGS = "-g -fsanitize=address"
 
 [feature.h5py-tsan-freethreading.dependencies]
-python.git = "https://github.com/crusaderky/cpython"
-python.rev = "tsan"
-python.subdirectory = "Tools/pixi-packages/tsan-freethreading"
-numpy.git = "https://github.com/ngoldbaum/numpy"
-numpy.rev = "tsan-ft-pixi"
-numpy.subdirectory = "pixi-packages/tsan-freethreading"
-hdf5.path = "pixi-packages/hdf5/tsan"
+python = { git = "https://github.com/python/cpython", subdirectory = "Tools/pixi-packages/tsan-freethreading" }
+numpy = { git = "https://github.com/ngoldbaum/numpy", rev = "tsan-ft-pixi", subdirectory = "pixi-packages/tsan-freethreading" }
+hdf5 = { path = "pixi-packages/hdf5/tsan" }
 pytest-run-parallel = "*"
 
 [feature.h5py-tsan-freethreading.activation.env]
