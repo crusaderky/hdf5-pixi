@@ -45,7 +45,7 @@ jobs:
 
       - uses: prefix-dev/setup-pixi@v0
         with:
-          pixi-version: v0.63.2
+          pixi-version: v0.64.0
           environments: h5py-${{ matrix.variant }}
 
       - name: List conda packages
